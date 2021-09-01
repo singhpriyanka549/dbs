@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="cards" *ngFor="let data of userData">
+        <div class="card-item">
+            <div class="card-image" style="background-image: url('https://source.unsplash.com/featured/?mountains');">
+            </div>
+            <div class="card-info">
+                <h6 class="card-title" (click)="redirectUser(data.id)">{{data.title}}</h6>
+                <p class="card-intro">{{data.body}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="content">
+	<section>
+		<div class="register-wrapper">
+			<div class="register-block">
+				<h3 class="register-title">Create an account</h3>
+				<form [formGroup]="register" (ngSubmit)="onSubmit()">
+					<input type="text" placeholder="Enter your Name" formControlName="name" />
+					<div *ngIf="(f.name.touched && f.name.invalid)" class="alert alert-danger">Name is required.</div>
+					<input type="number" placeholder="Mobile number" formControlName="mobile" />
+					<div *ngIf="(f.mobile.touched && f.mobile.invalid)" class="alert alert-danger">Number should be 10
+						digits.</div>
+					<input type="text" placeholder="Email" formControlName="email" />
+					<input type="text" placeholder="website" formControlName="website" />
+					<input type="submit" value="Add New User" />
+				</form>
+			</div>
+		</div>
+	</section>
+</div>
